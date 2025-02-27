@@ -1,0 +1,89 @@
+    body {
+        background-color: aliceblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        font-family: Arial, sans-serif;
+        margin: 0;
+    }
+
+    /* STYLE FOR THE INPUT FIELD */
+    #charInput {
+        text-align: center;
+        font-size: 18px;
+        padding: 5px;
+        margin-right: 5px;
+        height: 3.4vh;
+        border-radius: 13px;
+        border: 2px solid rgba(38, 93, 170, 0.807);
+        margin-bottom: 20px;
+        outline: none;
+    }
+
+    /* Style for the input field's placeholder */
+    #charInput::placeholder {
+        color: rgba(38, 93, 170, 0.6);
+        font-style: italic;
+        font-size: 16px;
+    }
+
+
+    /* STYLE FOR THE SUBMIT BUTTON */
+    #submitButton {
+        font-size: 16px;
+        cursor: pointer;
+        color: whitesmoke;
+        background-color: rgba(38, 93, 170, 0.807);
+        height: 5vh;
+        border: none;
+        border-radius: 13px;
+        padding: 0 20px;
+        margin-bottom: 20px;
+        outline: none;
+        transition: background-color 0.3s ease;
+    }
+
+    #submitButton:hover {
+        background-color: rgb(4, 23, 64);
+    }
+
+    /* STYLE FOR THE IMAGE */
+    .displayedImage {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 80vh;
+        overflow: hidden;
+        background-color: #f0f8ff;
+        border: 2px solid rgba(38, 93, 170, 0.807);
+        border-radius: 15px;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    /* Style for the image */
+    #displayedImage {
+        max-width: 90%;
+        max-height: 80%;
+        animation: bobbing 2s infinite;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    /* Bobbing animation */
+    @keyframes bobbing {
+        0% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-20px);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }

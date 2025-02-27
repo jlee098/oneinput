@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fish Out of Water</title>
+    <link rel="stylesheet" href="main.css">
+
+</head>
+<h1></h1>
+
+<body>
+
+    <!-- INPUT FIELD FOR 1 CHARACTER -->
+    <input type="text" id="charInput" maxlength="1" placeholder="enter a letter (A-Z)">
+
+
+    <!-- BUTTON TO DISPLAY IMAGE -->
+    <button onclick="displayImage()" id="submitButton">get our fish!</button>
+
+    <!-- IMAGE TO DISPLAY -->
+    <div class="displayedImage">
+        <img id="displayedImage" src="" alt="Fish Image" style="display: none;">
+    </div>
+
+    <!-- Image Display Script Below -->
+    <script>
+        // Array of images
+        // DIRECTIONS: UPDATE THE URLS WITH THE RELATIVE LINKS OF YOUR IMAGES
+        const images = [
+            "./fishimages/bigstatuefish.png", //A
+            "./fishimages/blackboxfish.png", //B
+            "./fishimages/cupfish.png", //C
+            "./fishimages/displayfish.png", //D
+            "./fishimages/filletfish.png", //E
+            "./fishimages/fishbag1.png", //F
+            "./fishimages/menufish.png", //G
+            "./fishimages/fishbag3.png", //H
+            "./fishimages/fishbag4.png", //I
+            "./fishimages/fishdinnermenu.png", //J
+            "./fishimages/fishhat.png", //K
+            "./fishimages/redboxfish.png", //L
+            "./fishimages/fishrestaurant.png", //M
+            "./fishimages/fishroom.png", //N
+            "./fishimages/fishsardines.png", //O
+            "./fishimages/fishseagrillgraphic.png", //P
+            "./fishimages/fishwooden.png", //Q
+            "./fishimages/goldfishstatue.png", //R
+            "./fishimages/packagingfish.png", //S
+            "./fishimages/projectionfish.png", //T
+            "./fishimages/pushbottlefish.png", //U
+            "./fishimages/showeringfish.png", //V
+            "./fishimages/singlespreadfish.png", //W
+            "./fishimages/tagfish.png", //X
+            "./fishimages/tablefish.png", //Y
+            "./fishimages/upclosefishpackaging.png", //Z
+        ];
+
+        function displayImage() {
+            const input = document.getElementById("charInput").value.toUpperCase();
+            const imgElement = document.getElementById("displayedImage");
+
+            // Assign an image based on character (A-Z)
+            const index = input.charCodeAt(0) - 65; // 'A' is 65 in ASCII
+            if (index >= 0 && index < images.length) {
+                imgElement.src = images[index];
+                imgElement.style.display = "block";
+            } else {
+                /* 
+                alert("Please enter a letter between A and Z.");
+                imgElement.style.display = "none";
+                */
+
+                // IF INVALID INPUT IS ENTERED, DISPLAY ALTERNATE IMAGE
+                imgElement.src = "./fishimages/fishy.gif"
+                imgElement.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -22,7 +22,6 @@
         outline: none;
     }
 
-    /* Style for the input field's placeholder */
     #charInput::placeholder {
         color: rgba(38, 93, 170, 0.6);
         font-style: italic;
@@ -65,7 +64,6 @@
         margin-top: 20px;
     }
 
-    /* Style for the image */
     #displayedImage {
         max-width: 90%;
         max-height: 80%;
@@ -73,7 +71,6 @@
         transition: transform 0.2s ease-in-out;
     }
 
-    /* Bobbing animation */
     @keyframes bobbing {
         0% {
             transform: translateY(0);
